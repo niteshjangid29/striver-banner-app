@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+const BASE_URL = 'https://banner-app-bpjh.onrender.com';
+
 export const fetchAllBanners = async () => {
     try {
-        const response = await axios.get('/api/v1/banners');
+        const response = await axios.get(`${BASE_URL}/api/v1/banners`);
         return response.data;
     } catch (error) {
         console.error('Error fetching all banners: ', error);
@@ -12,7 +14,7 @@ export const fetchAllBanners = async () => {
 
 export const fetchLatestVisibleBanner = async () => {
     try {
-        const response = await axios.get('/api/v1/banners/latest');
+        const response = await axios.get(`${BASE_URL}/api/v1/banners/latest`);
         return response.data;
     } catch (error) {
         console.error('Error fetching latest visible banner: ', error);
@@ -22,7 +24,7 @@ export const fetchLatestVisibleBanner = async () => {
 
 export const fetchBannerById = async (id) => {
     try {
-        const response = await axios.get(`/api/v1/banner/${id}`);
+        const response = await axios.get(`${BASE_URL}/api/v1/banner/${id}`);
         return response.data;
     } catch (error) {
         console.error('Error fetching banner by id: ', error);
@@ -32,7 +34,7 @@ export const fetchBannerById = async (id) => {
 
 export const createBanner = async (newBanner) => {
     try {
-        const response = await axios.post('/api/v1/banner', newBanner);
+        const response = await axios.post(`${BASE_URL}/api/v1/banner`, newBanner);
         return response.data;
     } catch (error) {
         console.error('Error creating banner: ', error);
@@ -42,7 +44,7 @@ export const createBanner = async (newBanner) => {
 
 export const updateBanner = async (id, updateBanner) => {
     try {
-        const response = await axios.put(`/api/v1/banner/${id}`, updateBanner);
+        const response = await axios.put(`${BASE_URL}/api/v1/banner/${id}`, updateBanner);
         return response.data;
     } catch (error) {
         console.error('Error updating banner: ', error);
@@ -52,7 +54,7 @@ export const updateBanner = async (id, updateBanner) => {
 
 export const deleteBanner = async (id) => {
     try {
-        const response = await axios.delete(`/api/v1/banner/${id}`);
+        const response = await axios.delete(`${BASE_URL}/api/v1/banner/${id}`);
         return response.data;
     } catch (error) {
         console.error('Error deleting banner: ', error);
