@@ -35,7 +35,7 @@ const Banner = () => {
 
     return (
         <div className="container  mx-auto my-4">
-            <div className="banner-content flex flex-col items-center bg-gradient-to-r from-blue-500 to-teal-500 text-white px-8 py-6 rounded-lg shadow-lg">
+            <div className="banner-content flex flex-col items-center text-center bg-gradient-to-r from-blue-500 to-teal-500 text-white px-8 py-6 rounded-lg shadow-lg">
                 {(isExpired || !banner || loading || error) ?
                     <>
                         {!loading && !error && isExpired && <p className="text-2xl font-bold mb-2">Banner has expired</p>}
