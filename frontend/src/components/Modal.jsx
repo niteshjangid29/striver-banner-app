@@ -21,18 +21,34 @@ const Modal = ({ isOpen, onClose, editBanner, onSuccess }) => {
         }
     }, [editBanner]);
 
+    const subtractTime = (dateString, hours, minutes) => {
+        console.log("dateString", dateString);
+        const date = new Date(dateString);
+        console.log("date", date);
+
+        // Convert the date back to a string in the format required
+        console.log("date.toISOString()", date.toISOString().slice(0, 16));
+        return date.toISOString().slice(0, 16); // For 'YYYY-MM-DDTHH:MM' format
+    };
+
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         setError(null);
         setSuccess(null);
 
+        const adjustedEndTime = subtractTime(endTime, 5, 30);
+
         const data = {
             name,
             description,
             link,
-            end_time: endTime,
+            end_time: adjustedEndTime,
             is_visible: visible
         };
+
+        console.log(data)
+
 
         try {
             let response;
