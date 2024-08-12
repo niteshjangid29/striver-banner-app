@@ -7,6 +7,7 @@
 
 # frontend
 /frontend/node_modules
+/frontend/build
 
 # backend
 /backend/node_modules

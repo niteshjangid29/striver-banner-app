@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
-    "start-backend": "cd backend && npm run dev",
-    "start-frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run serve\" \"npm run start-backend\"",
+    "start-backend": "cd backend && npm install && npm run dev",
+    "start-frontend": "cd frontend && npm install && npm start",
     "build": "cd frontend && npm run build",
+    "serve": "cd frontend && serve -s build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
