@@ -1,11 +1,13 @@
-## Frontend: 
+### Frontend: 
 [Frontend Live](https://banner-app-striver.vercel.app/)
 
-## Backend:
+### Backend:
 [Backend Live](https://banner-app-bpjh.onrender.com)
 
-⚠️ **Note:** First Start Backend then Start Frontend
-🔴 This may take some time to start
+- ⚠️ **Note:** First Start Backend then Start Frontend
+- 🔴 This may take some time to start (try refershing both frontend & backend)
+
+-----------------------------------------------------------------------
 
 ## Project Structure
 
